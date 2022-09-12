@@ -41,8 +41,14 @@ extension LocationView {
             .multilineTextAlignment(.center)
             .frame(height: 55)
             .frame(maxWidth: .infinity)
+            .overlay(alignment: .leading, content: {
+                Image(systemName: "arrow.down")
+                    .font(.headline)
+                    .foregroundColor(.primary)
+                    .padding()
+            })
             .background(.ultraThinMaterial,in: RoundedRectangle(cornerRadius: 15, style: .continuous)
-                        )
+            )
             .shadow(color: .black.opacity(0.4), radius: 15, x: 5, y: 15)
     }
 }
