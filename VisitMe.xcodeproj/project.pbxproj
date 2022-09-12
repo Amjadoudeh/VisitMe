@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		D0A7D02D28CF8E5E001A8F98 /* VisitMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D02C28CF8E5E001A8F98 /* VisitMeApp.swift */; };
 		D0A7D02F28CF8E5E001A8F98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D02E28CF8E5E001A8F98 /* ContentView.swift */; };
-		D0A7D03128CF8E5F001A8F98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A7D03028CF8E5F001A8F98 /* Assets.xcassets */; };
 		D0A7D03428CF8E5F001A8F98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A7D03328CF8E5F001A8F98 /* Preview Assets.xcassets */; };
+		D0A7D03E28CF9040001A8F98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A7D03D28CF9040001A8F98 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0A7D02928CF8E5E001A8F98 /* VisitMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisitMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A7D02C28CF8E5E001A8F98 /* VisitMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitMeApp.swift; sourceTree = "<group>"; };
 		D0A7D02E28CF8E5E001A8F98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D0A7D03028CF8E5F001A8F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A7D03328CF8E5F001A8F98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D0A7D03D28CF9040001A8F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Downloads/SwiftfulMapApp-Downloads/Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +51,10 @@
 		D0A7D02B28CF8E5E001A8F98 /* VisitMe */ = {
 			isa = PBXGroup;
 			children = (
-				D0A7D02C28CF8E5E001A8F98 /* VisitMeApp.swift */,
-				D0A7D02E28CF8E5E001A8F98 /* ContentView.swift */,
-				D0A7D03028CF8E5F001A8F98 /* Assets.xcassets */,
+				D0A7D03A28CF8F15001A8F98 /* Views */,
+				D0A7D03B28CF8F20001A8F98 /* ViewModel */,
+				D0A7D03C28CF8F29001A8F98 /* Model */,
+				D0A7D03D28CF9040001A8F98 /* Assets.xcassets */,
 				D0A7D03228CF8E5F001A8F98 /* Preview Content */,
 			);
 			path = VisitMe;
@@ -65,6 +66,29 @@
 				D0A7D03328CF8E5F001A8F98 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0A7D03A28CF8F15001A8F98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0A7D02C28CF8E5E001A8F98 /* VisitMeApp.swift */,
+				D0A7D02E28CF8E5E001A8F98 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0A7D03B28CF8F20001A8F98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D0A7D03C28CF8F29001A8F98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +149,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A7D03E28CF9040001A8F98 /* Assets.xcassets in Resources */,
 				D0A7D03428CF8E5F001A8F98 /* Preview Assets.xcassets in Resources */,
-				D0A7D03128CF8E5F001A8F98 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

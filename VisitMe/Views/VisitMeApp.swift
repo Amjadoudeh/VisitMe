@@ -1,10 +1,3 @@
-//
-//  VisitMeApp.swift
-//  VisitMe
-//
-//  Created by Amjad Oudeh on 12.09.22.
-//
-
 import SwiftUI
 
 @main
