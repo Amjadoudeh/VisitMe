@@ -1,14 +1,5 @@
 import SwiftUI
 
-
-class LocationModelView: ObservableObject {
-    @Published var locations: [Location]
-    init() {
-        let locations = LocationsDataService.locations
-        self.locations = locations
-    }
-}
-
 struct LocationView: View {
     @EnvironmentObject private var locationViewModel: LocationModelView
     
@@ -24,5 +15,6 @@ struct LocationView: View {
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
         LocationView()
+            .environmentObject(LocationModelView())
     }
 }
