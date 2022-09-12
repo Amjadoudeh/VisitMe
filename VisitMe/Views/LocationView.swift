@@ -1,13 +1,14 @@
 import SwiftUI
+import MapKit
+
 
 struct LocationView: View {
     @EnvironmentObject private var locationViewModel: LocationModelView
     
     var body: some View {
-        List {
-            ForEach(locationViewModel.locations) {
-                Text($0.name)
-            }
+        ZStack {
+            Map(coordinateRegion: $locationViewModel.mapRegion)
+                .ignoresSafeArea()
         }
     }
 }
