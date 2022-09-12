@@ -4,12 +4,18 @@ import SwiftUI
 
 class LocationModelView: ObservableObject {
     @Published var locations: [Location]
-    @Published var mapLocation: Location
+    @Published var mapLocation: Location {
+        didSet {
+            updateLocation(location: mapLocation)
+        }
+    }
+    
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     init() {
         let locations = LocationsDataService.locations
         self.locations = locations
+        
         self.mapLocation = locations.first!
         self.updateLocation(location: locations.first!)
     }
