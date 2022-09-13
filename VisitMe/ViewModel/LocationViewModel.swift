@@ -24,6 +24,9 @@ class LocationViewModel: ObservableObject {
     //MARK: showing list of locations
     @Published private(set) var showLocationsList: Bool = false
     
+    //MARK: showing the Details via sheet
+    @Published var showSheetLocationDetails: Location? = nil
+    
     //MARK: Update the Location
     private func updateLocation(location: Location) {
         withAnimation(.easeInOut) {

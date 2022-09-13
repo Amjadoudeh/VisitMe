@@ -18,6 +18,9 @@ struct LocationView: View {
                 locationPerviewStack
             }
         }
+        .sheet(item: $locationViewModel.showSheetLocationDetails, onDismiss: nil) { location in
+            LocationViewDetails(location: location)
+        }
     }
 }
 

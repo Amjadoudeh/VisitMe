@@ -75,7 +75,7 @@ extension LocationViewDetails {
     }
     
     var mapLayer: some View {
-        Map(coordinateRegion: .constant(MKCoordinateRegion(center: location.coordinates, span: locationViewModel.mapSpan)),
+        Map(coordinateRegion: .constant(MKCoordinateRegion(center: location.coordinates, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))),
             annotationItems: [location]) { location in
             MapAnnotation(coordinate: location.coordinates) {
                 LocationMapAnnotationView()
@@ -89,7 +89,7 @@ extension LocationViewDetails {
     
     var closeButton: some View {
         Button {
-            
+            locationViewModel.showSheetLocationDetails = nil
         }label: {
             Image(systemName: "xmark")
                 .font(.headline)
