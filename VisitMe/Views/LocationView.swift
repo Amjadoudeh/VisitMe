@@ -33,21 +33,25 @@ extension LocationView {
     
     private var header: some View {
         VStack {
-            Text(locationViewModel.mapLocation.name + " , " + locationViewModel.mapLocation.cityName)
-                .font(.title)
-                .fontWeight(.medium)
-                .foregroundColor(.primary)
-                .multilineTextAlignment(.center)
-                .frame(height: 55)
-                .frame(maxWidth: .infinity)
-                .overlay(alignment: .leading, content: {
-                    Image(systemName: "arrow.down")
-                        .font(.headline)
-                        .foregroundColor(.primary)
-                        .padding()
-                })
-            
-            LocationsListView()
+            Button(action: locationViewModel.toggleLocationsList) {
+                Text(locationViewModel.mapLocation.name + " , " + locationViewModel.mapLocation.cityName)
+                    .font(.title)
+                    .fontWeight(.medium)
+                    .foregroundColor(.primary)
+                    .multilineTextAlignment(.center)
+                    .frame(height: 55)
+                    .frame(maxWidth: .infinity)
+                    .overlay(alignment: .leading, content: {
+                        Image(systemName: "arrow.down"  )
+                            .font(.headline)
+                            .foregroundColor(.primary)
+                            .padding()
+                            .rotationEffect(Angle(degrees: locationViewModel.showLocationsList ? 180 : 0))
+                    })
+            }
+            if locationViewModel.showLocationsList {
+                LocationsListView()
+            }
         }
         .background(.ultraThinMaterial,in: RoundedRectangle(cornerRadius: 15, style: .continuous)
         )

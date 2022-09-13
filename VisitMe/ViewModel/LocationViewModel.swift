@@ -1,6 +1,5 @@
-import Foundation
-import MapKit
 import SwiftUI
+import MapKit
 
 class LocationModelView: ObservableObject {
     @Published var locations: [Location]
@@ -10,6 +9,8 @@ class LocationModelView: ObservableObject {
         }
     }
     
+    
+    // showing the current location on the map
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     init() {
@@ -20,9 +21,18 @@ class LocationModelView: ObservableObject {
         self.updateLocation(location: locations.first!)
     }
     
+    // showing list of locations
+    @Published private(set) var showLocationsList: Bool = false
+    
     private func updateLocation(location: Location) {
         withAnimation(.easeInOut) {
             mapRegion = MKCoordinateRegion(center: location.coordinates, span: mapSpan)
+        }
+    }
+    
+   func toggleLocationsList() {
+        withAnimation(.easeInOut) {
+            showLocationsList.toggle()
         }
     }
 }
