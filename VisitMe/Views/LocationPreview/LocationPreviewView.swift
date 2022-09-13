@@ -22,6 +22,7 @@ struct LocationPreviewView: View {
             .offset(y:65)
         )
         .cornerRadius(10)
+        .shadow(color: .black.opacity(0.5), radius: 10)
         
     }
 }

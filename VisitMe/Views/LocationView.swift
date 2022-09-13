@@ -15,6 +15,17 @@ struct LocationView: View {
                 header
                     .padding()
                 Spacer()
+                
+                //MARK: Location Preview View
+                ZStack {
+                    ForEach(locationViewModel.locations) { location in
+                        if locationViewModel.mapLocation == location {
+                            LocationPreviewView(location: location)
+                                .padding()
+                                .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                        }
+                    }
+                }
             } 
         }
     }
