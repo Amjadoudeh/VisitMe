@@ -97,11 +97,10 @@
 			isa = PBXGroup;
 			children = (
 				D0A7D05A28D0F256001A8F98 /* Info.plist */,
-				D0A7D02C28CF8E5E001A8F98 /* VisitMeApp.swift */,
-				D0A7D03F28CF90C4001A8F98 /* DataService */,
 				D0A7D03A28CF8F15001A8F98 /* Views */,
 				D0A7D03B28CF8F20001A8F98 /* ViewModel */,
 				D0A7D03C28CF8F29001A8F98 /* Model */,
+				D0A7D03F28CF90C4001A8F98 /* DataService */,
 				D0A7D03D28CF9040001A8F98 /* Assets.xcassets */,
 				D0A7D03228CF8E5F001A8F98 /* Preview Content */,
 			);
@@ -119,8 +118,7 @@
 		D0A7D03A28CF8F15001A8F98 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D0A7D04528CF989D001A8F98 /* LocationView.swift */,
-				D0A7D07028D0FF1E001A8F98 /* Details */,
+				D0A7D07728D10435001A8F98 /* Main */,
 				D0A7D05428D0792D001A8F98 /* LocationsList */,
 				D0A7D04F28D07824001A8F98 /* LocationPreview */,
 				D0A7D05728D0C587001A8F98 /* LocationViewDetails */,
@@ -221,6 +219,16 @@
 				D0A7D07528D10077001A8F98 /* LocationMainViewMap.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		D0A7D07728D10435001A8F98 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D0A7D02C28CF8E5E001A8F98 /* VisitMeApp.swift */,
+				D0A7D04528CF989D001A8F98 /* LocationView.swift */,
+				D0A7D07028D0FF1E001A8F98 /* Details */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
