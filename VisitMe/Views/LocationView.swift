@@ -7,7 +7,20 @@ struct LocationView: View {
     var body: some View {
         ZStack {
             //MARK: Map view
-            Map(coordinateRegion: $locationViewModel.mapRegion)
+            Map(coordinateRegion: $locationViewModel.mapRegion,
+                annotationItems: locationViewModel.locations,
+                annotationContent: { location in
+                MapAnnotation(coordinate: location.coordinates) {
+                    LocationMapAnnotationView()
+                        .scaleEffect(locationViewModel.mapLocation == location ? 1 : 0.7)
+                        .shadow(radius: 15)
+                        .onTapGesture {
+                            locationViewModel.showNextLocation(location: location)
+                        }
+                    
+                }
+            }
+            )
                 .ignoresSafeArea()
             
             //MARK: list View
