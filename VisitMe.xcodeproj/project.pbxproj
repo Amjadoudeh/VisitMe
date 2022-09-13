@@ -20,6 +20,7 @@
 		D0A7D05128D0787B001A8F98 /* ImageSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D05028D0787B001A8F98 /* ImageSectionView.swift */; };
 		D0A7D05328D078C2001A8F98 /* TitleSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D05228D078C2001A8F98 /* TitleSectionView.swift */; };
 		D0A7D05628D0AF1C001A8F98 /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D05528D0AF1C001A8F98 /* LocationMapAnnotationView.swift */; };
+		D0A7D05928D0C5DC001A8F98 /* LocationViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D05828D0C5DC001A8F98 /* LocationViewDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D0A7D05028D0787B001A8F98 /* ImageSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSectionView.swift; sourceTree = "<group>"; };
 		D0A7D05228D078C2001A8F98 /* TitleSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionView.swift; sourceTree = "<group>"; };
 		D0A7D05528D0AF1C001A8F98 /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
+		D0A7D05828D0C5DC001A8F98 /* LocationViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				D0A7D02C28CF8E5E001A8F98 /* VisitMeApp.swift */,
 				D0A7D03F28CF90C4001A8F98 /* DataService */,
 				D0A7D03A28CF8F15001A8F98 /* Views */,
+				D0A7D05728D0C587001A8F98 /* LocationViewDetails */,
 				D0A7D03B28CF8F20001A8F98 /* ViewModel */,
 				D0A7D03C28CF8F29001A8F98 /* Model */,
 				D0A7D03D28CF9040001A8F98 /* Assets.xcassets */,
@@ -140,6 +143,14 @@
 				D0A7D04B28D06739001A8F98 /* LocationListViewRow.swift */,
 			);
 			path = LocationsList;
+			sourceTree = "<group>";
+		};
+		D0A7D05728D0C587001A8F98 /* LocationViewDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D0A7D05828D0C5DC001A8F98 /* LocationViewDetails.swift */,
+			);
+			path = LocationViewDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 			files = (
 				D0A7D02D28CF8E5E001A8F98 /* VisitMeApp.swift in Sources */,
 				D0A7D05128D0787B001A8F98 /* ImageSectionView.swift in Sources */,
+				D0A7D05928D0C5DC001A8F98 /* LocationViewDetails.swift in Sources */,
 				D0A7D04628CF989D001A8F98 /* LocationView.swift in Sources */,
 				D0A7D04E28D07514001A8F98 /* LocationPreviewView.swift in Sources */,
 				D0A7D04328CF94A0001A8F98 /* Location.swift in Sources */,
