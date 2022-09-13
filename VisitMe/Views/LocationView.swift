@@ -2,7 +2,7 @@ import SwiftUI
 import MapKit
 
 struct LocationView: View {
-    @EnvironmentObject private var locationViewModel: LocationModelView
+    @EnvironmentObject private var locationViewModel: LocationViewModel
     
     var body: some View {
         ZStack {
@@ -34,7 +34,7 @@ struct LocationView: View {
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
         LocationView()
-            .environmentObject(LocationModelView())
+            .environmentObject(LocationViewModel())
     }
 }
 
@@ -45,8 +45,8 @@ extension LocationView {
     private var header: some View {
         VStack {
             Button(action: locationViewModel.toggleLocationsList) {
-                Text(locationViewModel.mapLocation.name + " , " + locationViewModel.mapLocation.cityName)
-                    .font(.title)
+                Text(locationViewModel.mapLocation.name + " - " + locationViewModel.mapLocation.cityName)
+                    .font(.title2)
                     .fontWeight(.medium)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.center)

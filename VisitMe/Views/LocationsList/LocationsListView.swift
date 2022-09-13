@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LocationsListView: View {
-    @EnvironmentObject private var locationViewModel: LocationModelView
+    @EnvironmentObject private var locationViewModel: LocationViewModel
     
     var body: some View {
         List {
@@ -23,6 +23,6 @@ struct LocationsListView: View {
 struct LocationsListView_Previews: PreviewProvider {
     static var previews: some View {
         LocationsListView()
-            .environmentObject(LocationModelView())
+            .environmentObject(LocationViewModel())
     }
 }

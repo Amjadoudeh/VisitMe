@@ -1,7 +1,7 @@
 import SwiftUI
 import MapKit
 
-class LocationModelView: ObservableObject {
+class LocationViewModel: ObservableObject {
     @Published var locations: [Location]
     @Published var mapLocation: Location {
         didSet {
@@ -45,4 +45,23 @@ class LocationModelView: ObservableObject {
             showLocationsList = false
         }
     }
+    
+    //MARK: NextLocationButtonPressed
+    func nextButtonPressed() {
+        // get the current index
+        guard let currentIndex = locations.firstIndex(where: {$0 == mapLocation}) else { return }
+        
+        //Check of the currentIndex is valid
+        let nextIndex = currentIndex + 1
+        guard locations.indices.contains(nextIndex) else {
+            guard let firstLocation = locations.first else { return }
+            showNextLocation(location: firstLocation)
+            return
+            
+        }
+        // Next index is valid
+        let nextLocation = locations[nextIndex]
+        showNextLocation(location: nextLocation)
+    }
+
 }
