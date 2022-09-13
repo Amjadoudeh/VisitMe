@@ -7,9 +7,13 @@ struct LocationsListView: View {
         List {
             ForEach(locationViewModel.locations) {
                 location in
-                LocationsListViewRow(location: location)
-                    .padding(.vertical,4)
-                    .listRowBackground(Color.clear)
+                Button {
+                    locationViewModel.showNextLocation(location: location)
+                } label: {
+                    LocationsListViewRow(location: location)
+                }
+                .padding(.vertical,4)
+                .listRowBackground(Color.clear)
             }
         }
         .listStyle(PlainListStyle())

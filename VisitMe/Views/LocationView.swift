@@ -41,6 +41,7 @@ extension LocationView {
                     .multilineTextAlignment(.center)
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
+                    .animation(.none, value: locationViewModel.mapLocation)
                     .overlay(alignment: .leading, content: {
                         Image(systemName: "arrow.down"  )
                             .font(.headline)
