@@ -14,6 +14,7 @@
 		D0A7D04328CF94A0001A8F98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D04228CF94A0001A8F98 /* Location.swift */; };
 		D0A7D04628CF989D001A8F98 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D04528CF989D001A8F98 /* LocationView.swift */; };
 		D0A7D04828CF9CE2001A8F98 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D04728CF9CE2001A8F98 /* LocationViewModel.swift */; };
+		D0A7D04A28CFA86F001A8F98 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7D04928CFA86F001A8F98 /* LocationsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D0A7D04228CF94A0001A8F98 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D0A7D04528CF989D001A8F98 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		D0A7D04728CF9CE2001A8F98 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		D0A7D04928CFA86F001A8F98 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A7D04528CF989D001A8F98 /* LocationView.swift */,
+				D0A7D04928CFA86F001A8F98 /* LocationsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				D0A7D02D28CF8E5E001A8F98 /* VisitMeApp.swift in Sources */,
 				D0A7D04628CF989D001A8F98 /* LocationView.swift in Sources */,
 				D0A7D04328CF94A0001A8F98 /* Location.swift in Sources */,
+				D0A7D04A28CFA86F001A8F98 /* LocationsListView.swift in Sources */,
 				D0A7D04828CF9CE2001A8F98 /* LocationViewModel.swift in Sources */,
 				D0A7D04128CF9100001A8F98 /* LocationsDataService.swift in Sources */,
 			);
