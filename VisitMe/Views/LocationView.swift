@@ -7,20 +7,7 @@ struct LocationView: View {
     var body: some View {
         ZStack {
             //MARK: Map view
-            Map(coordinateRegion: $locationViewModel.mapRegion,
-                annotationItems: locationViewModel.locations,
-                annotationContent: { location in
-                MapAnnotation(coordinate: location.coordinates) {
-                    LocationMapAnnotationView()
-                        .scaleEffect(locationViewModel.mapLocation == location ? 1 : 0.7)
-                        .shadow(radius: 15)
-                        .onTapGesture {
-                            locationViewModel.showNextLocation(location: location)
-                        }
-                    
-                }
-            }
-            )
+            mapLayer
                 .ignoresSafeArea()
             
             //MARK: list View
@@ -28,18 +15,8 @@ struct LocationView: View {
                 header
                     .padding()
                 Spacer()
-                
-                //MARK: Location Preview View
-                ZStack {
-                    ForEach(locationViewModel.locations) { location in
-                        if locationViewModel.mapLocation == location {
-                            LocationPreviewView(location: location)
-                                .padding()
-                                .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
-                        }
-                    }
-                }
-            } 
+                locationPerviewStack
+            }
         }
     }
 }
@@ -81,5 +58,35 @@ extension LocationView {
         .background(.ultraThinMaterial,in: RoundedRectangle(cornerRadius: 15, style: .continuous)
         )
         .shadow(color: .black.opacity(0.4), radius: 15, x: 5, y: 15)
+    }
+    
+    var mapLayer: some View {
+        Map(coordinateRegion: $locationViewModel.mapRegion,
+            annotationItems: locationViewModel.locations,
+            annotationContent: { location in
+            MapAnnotation(coordinate: location.coordinates) {
+                LocationMapAnnotationView()
+                    .scaleEffect(locationViewModel.mapLocation == location ? 1 : 0.7)
+                    .shadow(radius: 15)
+                    .onTapGesture {
+                        locationViewModel.showNextLocation(location: location)
+                    }
+                
+            }
+        }
+        )
+    }
+    
+    var locationPerviewStack: some View {
+        //MARK: Location Preview View
+        ZStack {
+            ForEach(locationViewModel.locations) { location in
+                if locationViewModel.mapLocation == location {
+                    LocationPreviewView(location: location)
+                        .padding()
+                        .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                }
+            }
+        }
     }
 }
