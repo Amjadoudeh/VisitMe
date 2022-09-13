@@ -3,7 +3,7 @@ import MapKit
 
 struct LocationView: View {
     @EnvironmentObject private var locationViewModel: LocationViewModel
-    
+    let maxWidthForIpad: CGFloat = 700
     var body: some View {
         ZStack {
             //MARK: Map view
@@ -14,6 +14,7 @@ struct LocationView: View {
             VStack(spacing: 0) {
                 header
                     .padding()
+                    .frame(maxWidth: maxWidthForIpad)
                 Spacer()
                 locationPerviewStack
             }
@@ -87,6 +88,8 @@ extension LocationView {
                 if locationViewModel.mapLocation == location {
                     LocationPreviewView(location: location)
                         .padding()
+                        .frame(maxWidth: maxWidthForIpad)
+                        .frame(maxWidth: .infinity)
                         .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
                 }
             }
