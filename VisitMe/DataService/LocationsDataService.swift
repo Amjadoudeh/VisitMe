@@ -12,7 +12,7 @@ class LocationsDataService {
             imageNames: [
                 "rome-colosseum-1",
                 "rome-colosseum-2",
-                "rome-colosseum-3",
+                "rome-colosseum-3"
             ],
             link: "https://en.wikipedia.org/wiki/Colosseum"),
         Location(
@@ -23,7 +23,7 @@ class LocationsDataService {
             imageNames: [
                 "rome-pantheon-1",
                 "rome-pantheon-2",
-                "rome-pantheon-3",
+                "rome-pantheon-3"
             ],
             link: "https://en.wikipedia.org/wiki/Pantheon,_Rome"),
         Location(
@@ -34,7 +34,7 @@ class LocationsDataService {
             imageNames: [
                 "rome-trevifountain-1",
                 "rome-trevifountain-2",
-                "rome-trevifountain-3",
+                "rome-trevifountain-3"
             ],
             link: "https://en.wikipedia.org/wiki/Trevi_Fountain"),
         Location(
@@ -44,7 +44,7 @@ class LocationsDataService {
             description: "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Locally nicknamed 'La dame de fer', it was constructed from 1887 to 1889 as the centerpiece of the 1889 World's Fair and was initially criticized by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognizable structures in the world.",
             imageNames: [
                 "paris-eiffeltower-1",
-                "paris-eiffeltower-2",
+                "paris-eiffeltower-2"
             ],
             link: "https://en.wikipedia.org/wiki/Eiffel_Tower"),
         Location(
@@ -55,9 +55,9 @@ class LocationsDataService {
             imageNames: [
                 "paris-louvre-1",
                 "paris-louvre-2",
-                "paris-louvre-3",
+                "paris-louvre-3"
             ],
-            link: "https://en.wikipedia.org/wiki/Louvre"),
+            link: "https://en.wikipedia.org/wiki/Louvre")
     ]
 
 }

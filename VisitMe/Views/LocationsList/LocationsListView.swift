@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LocationsListView: View {
     @EnvironmentObject private var locationViewModel: LocationViewModel
-    
+
     var body: some View {
         List {
             ForEach(locationViewModel.locations) {
@@ -12,7 +12,7 @@ struct LocationsListView: View {
                 } label: {
                     LocationsListViewRow(location: location)
                 }
-                .padding(.vertical,4)
+                .padding(.vertical, 4)
                 .listRowBackground(Color.clear)
             }
         }

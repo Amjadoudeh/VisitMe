@@ -2,14 +2,14 @@ import SwiftUI
 
 struct ImageSectionView: View {
     let location: Location
-    
+
     var body: some View {
-        ZStack{
+        ZStack {
             if let imageName = location.imageNames.first {
                 Image(imageName)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 100 , height: 100)
+                    .frame(width: 100, height: 100)
                     .cornerRadius(10)
             }
         }
@@ -18,4 +18,3 @@ struct ImageSectionView: View {
         .cornerRadius(10)
     }
 }
-

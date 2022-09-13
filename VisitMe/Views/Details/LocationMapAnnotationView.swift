@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct LocationMapAnnotationView: View {
-    
     let accentColor = Color("AccentColor")
-    
+
     var body: some View {
         VStack {
             Image(systemName: "map.circle.fill")
@@ -15,7 +14,7 @@ struct LocationMapAnnotationView: View {
                 .padding(6)
                 .background(accentColor)
                 .cornerRadius(36)
-            
+
             Image(systemName: "triangle.fill")
                 .resizable()
                 .scaledToFit()
@@ -24,7 +23,6 @@ struct LocationMapAnnotationView: View {
                 .rotationEffect(Angle(degrees: 180))
                 .offset(y: -10)
                 .padding(.bottom, 40)
-            
         }
     }
 }

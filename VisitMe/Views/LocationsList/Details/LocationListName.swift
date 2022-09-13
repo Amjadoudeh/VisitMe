@@ -1,12 +1,12 @@
 import SwiftUI
 
-struct TitleSectionView: View {
+struct LocationListName: View {
     let location: Location
-    
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 4.0) {
+        VStack(alignment: .leading) {
             Text(location.name)
-                .font(.title3.bold())
+                .font(.headline)
             Text(location.cityName)
                 .font(.subheadline)
         }
