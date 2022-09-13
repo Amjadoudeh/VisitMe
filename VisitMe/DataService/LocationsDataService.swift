@@ -58,6 +58,18 @@ class LocationsDataService {
                 "paris-louvre-3"
             ],
             link: "https://en.wikipedia.org/wiki/Louvre")
+        ,
+    Location(
+        name: "Umayya Mosque",
+        cityName: "Damascus",
+        coordinates: CLLocationCoordinate2D(latitude: 33.5117, longitude: 36.3067),
+        description: "Umayyad Mosque, located in the old city of Damascus, the capital of Syria, is one of the largest and oldest mosques in the world. Its religious importance stems from the eschatological reports concerning the mosque, and historic events associated with it. Christian and Muslim tradition alike consider it the burial place of John the Baptist's head, a tradition originating in the 6th century. Muslim tradition holds that the mosque will be the place Jesus will return before the End of Days. Two shrines inside the premises commemorate the Islamic prophet Muhammad's grandson Husayn ibn Ali, whose martyrdom is frequently compared to that of John the Baptist and Jesus.",
+        imageNames: [
+            "umayyad_mosque_1",
+            "umayyad_mosque_2",
+            "umayyad_mosque_3"
+        ],
+        link: "https://en.wikipedia.org/wiki/Umayyad_Mosque")
     ]
 
 }
